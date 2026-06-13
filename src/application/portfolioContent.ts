@@ -1,0 +1,373 @@
+import type { Language, PortfolioContent } from '../domain/portfolio'
+
+const skills = {
+  en: [
+    { title: 'Backend', items: ['PHP', 'Laravel', 'CakePHP', 'Node.js', 'NestJS'] },
+    { title: 'Frontend', items: ['ReactJS', 'SolidJS', 'JavaScript', 'HTML', 'CSS'] },
+    { title: 'Database', items: ['PostgreSQL', 'MySQL', 'Firebase Firestore'] },
+    {
+      title: 'Architecture',
+      items: ['REST API', 'DDD', 'CQRS', 'Monorepo', 'Microservice preparation'],
+    },
+    { title: 'Testing', items: ['Unit Test', 'End-to-End Test'] },
+    { title: 'Tools', items: ['Git', 'Docker', 'Redis', 'Prisma ORM'] },
+  ],
+  vi: [
+    { title: 'Backend', items: ['PHP', 'Laravel', 'CakePHP', 'Node.js', 'NestJS'] },
+    { title: 'Frontend', items: ['ReactJS', 'SolidJS', 'JavaScript', 'HTML', 'CSS'] },
+    { title: 'Cơ sở dữ liệu', items: ['PostgreSQL', 'MySQL', 'Firebase Firestore'] },
+    {
+      title: 'Kiến trúc',
+      items: ['REST API', 'DDD', 'CQRS', 'Monorepo', 'Chuẩn bị microservice'],
+    },
+    { title: 'Kiểm thử', items: ['Unit Test', 'End-to-End Test'] },
+    { title: 'Công cụ', items: ['Git', 'Docker', 'Redis', 'Prisma ORM'] },
+  ],
+}
+
+export const portfolioContent: Record<Language, PortfolioContent> = {
+  en: {
+    nav: [
+      { label: 'About', href: '#about' },
+      { label: 'Skills', href: '#skills' },
+      { label: 'Experience', href: '#experience' },
+      { label: 'Projects', href: '#projects' },
+      { label: 'Education', href: '#education' },
+      { label: 'Contact', href: '#contact' },
+    ],
+    labels: {
+      brandAria: 'Trung Ha home',
+      role: 'Backend Developer',
+      downloadCv: 'Download CV',
+      contactMe: 'Contact me',
+      mainStack: 'Main stack',
+      experience: 'Experience',
+      focus: 'Focus',
+      domain: 'Domain',
+      years: '3+ years',
+      backendSystems: 'Backend systems',
+      bookingPlatforms: 'Booking platforms',
+      about: 'About Me',
+      skills: 'Technical Skills',
+      workExperience: 'Work Experience',
+      projects: 'Projects',
+      education: 'Education',
+      contact: 'Contact',
+      languageSwitch: 'Switch to Vietnamese',
+      scrollTop: 'Back to top',
+    },
+    hero: {
+      name: 'Hà Thành Trung',
+      intro:
+        'Backend Developer with 3+ years of experience building booking and management systems using Laravel, NestJS, PostgreSQL, and MySQL. Experienced in API development, realtime systems, database optimization, testing, and backend architecture patterns such as DDD and CQRS.',
+      stack: 'Laravel, NestJS, PostgreSQL, MySQL',
+    },
+    about: {
+      heading: 'Backend-focused developer who can support the full product flow.',
+      paragraphs: [
+        'I have hands-on experience with PHP/Laravel and Node.js/NestJS, building APIs, booking flows, management features, and production backend systems.',
+        'When needed, I can work across frontend tasks using ReactJS, SolidJS, HTML, CSS, and JavaScript. I also have basic experience with Docker, Redis, CI/CD workflows, and production log investigation.',
+      ],
+    },
+    sections: {
+      skillsHeading: 'Tools and technologies I use to build reliable systems.',
+      experienceHeading: 'Recent roles and product work.',
+      projectsHeading: 'Private product projects summarized by impact and stack.',
+      educationHeading: 'Academic background and current learning.',
+      contactHeading: 'Let us build something dependable.',
+    },
+    skills: skills.en,
+    experiences: [
+      {
+        company: 'SmartIT',
+        role: 'Backend Developer',
+        period: 'Apr 2026 - Present',
+        points: [
+          'Working on an internal vehicle booking system using modern JavaScript technologies and monorepo architecture.',
+          'Developing backend services using NestJS.',
+          'Building APIs and business logic for booking systems.',
+          'Working with monorepo architecture for future microservice migration.',
+          'Developing admin and internal interfaces using ReactJS and SolidJS.',
+          'Implementing realtime features with Firebase Firestore.',
+          'Applying DDD and CQRS patterns in backend development.',
+          'Working with Docker and Redis in development environment.',
+          'Writing and maintaining Unit Tests and End-to-End Tests.',
+          'Supporting CI/CD workflows and production issue investigation.',
+        ],
+        stack: [
+          'Node.js',
+          'NestJS',
+          'ReactJS',
+          'SolidJS',
+          'PostgreSQL',
+          'Prisma ORM',
+          'Firebase Firestore',
+          'Redis',
+          'Docker',
+        ],
+      },
+      {
+        company: 'SmartIT',
+        role: 'PHP Backend Developer',
+        period: 'Apr 2023 - Apr 2026',
+        points: [
+          'Worked on a Japanese vehicle booking and rental product using Laravel and MySQL.',
+          'Developed and maintained backend APIs.',
+          'Worked on booking flow, vehicle management, station management, and notification systems.',
+          'Optimized SQL queries and large CSV export processing.',
+          'Investigated and fixed production issues.',
+          'Integrated Firebase-related features.',
+          'Participated in architecture improvements and code refactoring.',
+        ],
+        stack: ['PHP', 'Laravel', 'MySQL', 'Firebase'],
+      },
+      {
+        company: 'SmartIT',
+        role: 'PHP Developer',
+        period: 'Jan 2023 - Mar 2023',
+        points: [
+          'Worked on a Japanese massage booking product using CakePHP.',
+          'Implemented booking-related features.',
+          'Maintained backend functions.',
+          'Worked with MySQL database.',
+          'Fixed bugs and supported existing systems.',
+        ],
+        stack: ['PHP', 'CakePHP', 'MySQL'],
+      },
+      {
+        company: 'NINA',
+        role: 'PHP Developer Intern',
+        period: 'Apr 2022 - Jun 2022',
+        points: [
+          'Converted existing UI designs into web interfaces.',
+          'Customized and maintained PHP-based websites.',
+          'Worked with existing source code and templates.',
+          'Supported outsource projects for clients.',
+        ],
+        stack: ['PHP', 'HTML', 'CSS', 'JavaScript'],
+      },
+    ],
+    projects: [
+      {
+        name: 'Vehicle Booking System',
+        description: [
+          'Developed backend APIs and business logic for booking and vehicle management systems.',
+          'Worked with realtime notifications, Firebase integration, and database optimization.',
+          'Applied DDD and CQRS architecture in monorepo environment.',
+        ],
+        stack: ['NestJS', 'PostgreSQL', 'Prisma', 'Firebase', 'Redis', 'Docker'],
+      },
+      {
+        name: 'Japanese Vehicle Rental Product',
+        description: [
+          'Maintained and developed booking management features.',
+          'Optimized CSV export and database queries.',
+          'Supported production issue investigation and feature improvements.',
+        ],
+        stack: ['Laravel', 'MySQL', 'Firebase'],
+      },
+      {
+        name: 'Massage Booking System',
+        description: ['Developed and maintained booking-related backend features.'],
+        stack: ['CakePHP', 'MySQL'],
+      },
+    ],
+    education: [
+      {
+        school: 'Ho Chi Minh City University of Technology (HCMUT)',
+        program: "Bachelor's Degree in Computer Science",
+        period: 'Jun 2022 - Jun 2027 expected',
+        note: 'Completed most of the academic program, pending English graduation requirement.',
+      },
+      {
+        school: 'Cao Thang Technical College',
+        program: 'Information Technology',
+        period: 'Aug 2018 - Jan 2022',
+      },
+      {
+        school: 'Korean Information Technology School (KITS)',
+        program: 'Currently participating',
+        period: 'Present',
+      },
+    ],
+    contact: {
+      email: 'hatrung772000@gmail.com',
+      phone: '0375063866',
+      github: 'https://github.com/trunghtt',
+    },
+  },
+  vi: {
+    nav: [
+      { label: 'Giới thiệu', href: '#about' },
+      { label: 'Kỹ năng', href: '#skills' },
+      { label: 'Kinh nghiệm', href: '#experience' },
+      { label: 'Dự án', href: '#projects' },
+      { label: 'Học vấn', href: '#education' },
+      { label: 'Liên hệ', href: '#contact' },
+    ],
+    labels: {
+      brandAria: 'Trang chủ Trung Ha',
+      role: 'Backend Developer',
+      downloadCv: 'Tải CV',
+      contactMe: 'Liên hệ',
+      mainStack: 'Stack chính',
+      experience: 'Kinh nghiệm',
+      focus: 'Trọng tâm',
+      domain: 'Lĩnh vực',
+      years: '3+ năm',
+      backendSystems: 'Hệ thống backend',
+      bookingPlatforms: 'Nền tảng đặt lịch',
+      about: 'Giới thiệu',
+      skills: 'Kỹ năng kỹ thuật',
+      workExperience: 'Kinh nghiệm làm việc',
+      projects: 'Dự án',
+      education: 'Học vấn',
+      contact: 'Liên hệ',
+      languageSwitch: 'Chuyển sang tiếng Anh',
+      scrollTop: 'Lên đầu trang',
+    },
+    hero: {
+      name: 'Hà Thành Trung',
+      intro:
+        'Backend Developer có hơn 3 năm kinh nghiệm xây dựng hệ thống đặt lịch và quản lý bằng Laravel, NestJS, PostgreSQL và MySQL. Có kinh nghiệm phát triển API, realtime system, tối ưu cơ sở dữ liệu, kiểm thử và các pattern kiến trúc backend như DDD và CQRS.',
+      stack: 'Laravel, NestJS, PostgreSQL, MySQL',
+    },
+    about: {
+      heading: 'Lập trình viên tập trung backend và có thể hỗ trợ toàn bộ luồng sản phẩm.',
+      paragraphs: [
+        'Tôi có kinh nghiệm thực tế với PHP/Laravel và Node.js/NestJS, xây dựng API, booking flow, tính năng quản lý và các hệ thống backend vận hành thật.',
+        'Khi cần, tôi có thể hỗ trợ frontend bằng ReactJS, SolidJS, HTML, CSS và JavaScript. Tôi cũng có kinh nghiệm cơ bản với Docker, Redis, quy trình CI/CD và điều tra log production.',
+      ],
+    },
+    sections: {
+      skillsHeading: 'Công nghệ và công cụ tôi dùng để xây dựng hệ thống ổn định.',
+      experienceHeading: 'Các vai trò và sản phẩm gần đây.',
+      projectsHeading: 'Các dự án sản phẩm riêng tư được tóm tắt theo tác động và stack.',
+      educationHeading: 'Nền tảng học tập và quá trình học hiện tại.',
+      contactHeading: 'Cùng xây dựng những hệ thống đáng tin cậy.',
+    },
+    skills: skills.vi,
+    experiences: [
+      {
+        company: 'SmartIT',
+        role: 'Backend Developer',
+        period: '04/2026 - Hiện tại',
+        points: [
+          'Phát triển hệ thống đặt xe nội bộ bằng JavaScript hiện đại và kiến trúc monorepo.',
+          'Xây dựng backend service bằng NestJS.',
+          'Phát triển API và business logic cho hệ thống booking.',
+          'Làm việc với kiến trúc monorepo để chuẩn bị chuyển đổi microservice trong tương lai.',
+          'Phát triển giao diện admin và nội bộ bằng ReactJS và SolidJS.',
+          'Triển khai tính năng realtime với Firebase Firestore.',
+          'Áp dụng DDD và CQRS trong phát triển backend.',
+          'Sử dụng Docker và Redis trong môi trường phát triển.',
+          'Viết và bảo trì Unit Test, End-to-End Test.',
+          'Hỗ trợ quy trình CI/CD và điều tra sự cố production.',
+        ],
+        stack: [
+          'Node.js',
+          'NestJS',
+          'ReactJS',
+          'SolidJS',
+          'PostgreSQL',
+          'Prisma ORM',
+          'Firebase Firestore',
+          'Redis',
+          'Docker',
+        ],
+      },
+      {
+        company: 'SmartIT',
+        role: 'PHP Backend Developer',
+        period: '04/2023 - 04/2026',
+        points: [
+          'Làm việc trên sản phẩm đặt và thuê xe Nhật Bản bằng Laravel và MySQL.',
+          'Phát triển và bảo trì backend API.',
+          'Phát triển booking flow, quản lý xe, quản lý trạm và hệ thống thông báo.',
+          'Tối ưu SQL query và xử lý export CSV dung lượng lớn.',
+          'Điều tra và sửa lỗi production.',
+          'Tích hợp các tính năng liên quan Firebase.',
+          'Tham gia cải thiện kiến trúc và refactor code.',
+        ],
+        stack: ['PHP', 'Laravel', 'MySQL', 'Firebase'],
+      },
+      {
+        company: 'SmartIT',
+        role: 'PHP Developer',
+        period: '01/2023 - 03/2023',
+        points: [
+          'Làm việc trên sản phẩm đặt lịch massage của Nhật Bản bằng CakePHP.',
+          'Triển khai các tính năng liên quan booking.',
+          'Bảo trì chức năng backend.',
+          'Làm việc với cơ sở dữ liệu MySQL.',
+          'Sửa lỗi và hỗ trợ hệ thống hiện có.',
+        ],
+        stack: ['PHP', 'CakePHP', 'MySQL'],
+      },
+      {
+        company: 'NINA',
+        role: 'PHP Developer Intern',
+        period: '04/2022 - 06/2022',
+        points: [
+          'Chuyển đổi thiết kế UI có sẵn thành giao diện web.',
+          'Tùy chỉnh và bảo trì website nền PHP.',
+          'Làm việc với source code và template có sẵn.',
+          'Hỗ trợ các dự án outsource cho khách hàng.',
+        ],
+        stack: ['PHP', 'HTML', 'CSS', 'JavaScript'],
+      },
+    ],
+    projects: [
+      {
+        name: 'Vehicle Booking System',
+        description: [
+          'Phát triển backend API và business logic cho hệ thống đặt xe và quản lý xe.',
+          'Làm việc với thông báo realtime, tích hợp Firebase và tối ưu cơ sở dữ liệu.',
+          'Áp dụng kiến trúc DDD và CQRS trong môi trường monorepo.',
+        ],
+        stack: ['NestJS', 'PostgreSQL', 'Prisma', 'Firebase', 'Redis', 'Docker'],
+      },
+      {
+        name: 'Japanese Vehicle Rental Product',
+        description: [
+          'Bảo trì và phát triển các tính năng quản lý booking.',
+          'Tối ưu export CSV và database query.',
+          'Hỗ trợ điều tra lỗi production và cải tiến tính năng.',
+        ],
+        stack: ['Laravel', 'MySQL', 'Firebase'],
+      },
+      {
+        name: 'Massage Booking System',
+        description: ['Phát triển và bảo trì các tính năng backend liên quan booking.'],
+        stack: ['CakePHP', 'MySQL'],
+      },
+    ],
+    education: [
+      {
+        school: 'Đại học Bách Khoa TP. Hồ Chí Minh (HCMUT)',
+        program: 'Cử nhân Khoa học Máy tính',
+        period: '06/2022 - dự kiến 06/2027',
+        note: 'Đã hoàn thành phần lớn chương trình học, còn yêu cầu tiếng Anh tốt nghiệp.',
+      },
+      {
+        school: 'Cao đẳng Kỹ thuật Cao Thắng',
+        program: 'Công nghệ Thông tin',
+        period: '08/2018 - 01/2022',
+      },
+      {
+        school: 'Korean Information Technology School (KITS)',
+        program: 'Đang tham gia',
+        period: 'Hiện tại',
+      },
+    ],
+    contact: {
+      email: 'hatrung772000@gmail.com',
+      phone: '0375063866',
+      github: 'https://github.com/trunghtt',
+    },
+  },
+}
+
+export function getPortfolioContent(language: Language) {
+  return portfolioContent[language]
+}
