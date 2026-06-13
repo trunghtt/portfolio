@@ -53,8 +53,6 @@ The site opens in English by default. Use the toggle button in the header to swi
 
 ## Contact
 
-- Email: `hatrung772000@gmail.com`
-- Phone: `0375063866`
 - GitHub: `https://github.com/trunghtt`
 
 ## Download PDF
